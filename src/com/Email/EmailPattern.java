@@ -5,8 +5,8 @@ import java.util.regex.Pattern;
 
 public class EmailPattern {
     public static void main(String[] args) {
-    	Pattern p= Pattern.compile("[.]+[a-z]{2,4}");
-		Matcher m=p.matcher(".net");
+    	Pattern p= Pattern.compile("([.]|[+]|[_]|[-])*[a-z A-Z 0-9]*");
+		Matcher m=p.matcher("111");
 		boolean matchfound=m.matches();
 		if(matchfound) {
 			System.out.println("Valid");
